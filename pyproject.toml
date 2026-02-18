@@ -15,16 +15,14 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 urls = {Repository = "https://github.com/cvg/LightGlue/"}
-dynamic = ["dependencies"]
-
-[project.optional-dependencies]
-dev = ["black==23.12.1", "flake8", "isort"]
+dependencies = [
+    "kornia>=0.8.2",
+    "matplotlib>=3.10.8",
+    "numpy>=2.2.6",
+    "opencv-python>=4.13.0.92",
+    "torch>=2.10.0",
+    "torchvision>=0.25.0",
+]
 
 [tool.setuptools]
 packages = ["lightglue"]
-
-[tool.setuptools.dynamic]
-dependencies = {file = ["requirements.txt"]}
-
-[tool.isort]
-profile = "black"
